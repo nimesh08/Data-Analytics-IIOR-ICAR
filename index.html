@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oilseed Atlas — Production & Trade Intelligence</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar">
+ <a class="brand" href="./"><span class="brand-icon">◒</span><span>oilseed<span class="brand-light">atlas</span><small>AGRICULTURAL INTELLIGENCE</small></span></a>
+ <div class="nav-label">WORKSPACE</div>
+ <nav aria-label="Main navigation"><button class="nav-item active" data-view="overview"><span>▦</span> Overview</button><button class="nav-item" data-view="production"><span>◷</span> Production</button><button class="nav-item" data-view="trade"><span>⇄</span> Import & export</button><button class="nav-item" data-view="explorer"><span>▤</span> Data explorer</button></nav>
+ <div class="sidebar-card"><span class="seed">✳</span><h3>From seed to insight.</h3><p>Explore the patterns behind India’s oilseed economy.</p><span class="mini-tag">CROP INTELLIGENCE</span></div>
+ <div class="sidebar-bottom"><span class="avatar">NC</span><div>Nimesh Cheedella<small>Project developer</small></div></div>
+</aside>
+<main>
+ <header class="topbar"><div>Workspace <span>/</span> <b id="breadcrumb">Overview</b></div><div class="status"><i></i> Annual statistics <span>•</span> India</div></header>
+ <div class="content">
+ <div class="title-row"><div><div class="eyebrow">OILSEEDS STATISTICAL INFORMATION SYSTEM</div><h1 id="title">A clearer view of oilseeds.</h1><p id="subtitle">Production, trade, and the stories behind the numbers.</p></div><button class="export-btn" id="export">↓ <span>Export data</span></button></div>
+ <div class="filters"><div class="filter-title"><span>≡</span> Explore the data</div><label>Year<select id="year"></select></label><label>Crop<select id="crop"><option value="All">All oilseeds</option></select></label><div class="filter-note">Volumes in million tonnes (Mt)</div></div>
+ <div class="demo-note"><span>◷</span> Annual crop series · Production and trade volumes from 2019 to 2024.</div>
+ <section class="kpis" aria-label="Key indicators"></section>
+ <section class="charts-grid">
+  <article class="panel trend-panel"><div class="panel-heading"><div><h2 id="trend-title">Production over time</h2><p id="trend-description">Six years of crop output</p></div><span class="badge">2019–2024</span></div><div class="legend" id="trend-legend"><span><i class="green"></i>Production</span><span><i class="gold"></i>Imports</span><span><i class="blue"></i>Exports</span></div><div id="trend" class="chart" role="img"></div></article>
+  <article class="panel mix-panel"><div class="panel-heading"><div><h2 id="mix-title">The crop mix</h2><p>Share of total production</p></div><span class="dots">···</span></div><div id="mix" class="mix"></div></article>
+ </section>
+ <section class="lower-grid">
+  <article class="panel table-panel"><div class="panel-heading"><div><h2 id="table-title">A closer look at the harvest</h2><p id="table-subtitle">Crop-level production and trade breakdown</p></div><label class="search-label"><span>⌕</span><input id="search" placeholder="Find a crop…" aria-label="Search crop"></label></div><div class="table-scroll"><table><thead><tr><th scope="col">CROP</th><th scope="col">PRODUCTION</th><th scope="col">IMPORTS</th><th scope="col">EXPORTS</th><th scope="col">YOY OUTPUT</th></tr></thead><tbody id="rows"></tbody></table></div><div class="table-footer"><span id="row-count"></span><span>Annual crop dataset</span></div></article>
+  <article class="insight-panel"><div class="eyebrow">THE BIG PICTURE</div><h2 id="insight-title"></h2><p id="insight"></p><div id="trade-bar" class="trade-bar"></div><div class="trade-key"><span>Imports</span><span>Exports</span></div><div class="insight-bottom"><span>↗</span> Discover patterns.<br>Ask better questions.</div></article>
+ </section>
+ <footer><span>Oilseed Atlas <span class="footer-separator">/</span> A portfolio project by Nimesh Cheedella</span><a href="https://github.com/nimesh08/Data-Analytics-IIOR-ICAR" target="_blank" rel="noopener">View source ↗</a></footer>
+ </div>
+</main>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
+
